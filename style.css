@@ -1,0 +1,93 @@
+.first-container {
+    background-color: purple;
+    color: white;
+    background-image: url("https://img.freepik.com/vetores-gratis/circuitos-com-fundo-digital-gradiente-azul-e-vermelho_23-2148821701.jpg?w=900&t=st=1697041344~exp=1697041944~hmac=5052d45382f4bc3306b828704e4d367975e4c84ac2197d57480b126ea122cd10.jpg");
+    background-size: cover;
+  }
+  .segundo-container {
+    background-color: rgb(74, 168, 223);
+    color: rgb(248, 252, 10);
+    background-size: cover;
+  }
+  .terceiro-container {
+    background-color: rgb(27, 79, 139);
+    color: rgb(248, 252, 10);
+    background-size: cover;
+  }
+  .quinto-container {
+    background-color: rgb(74, 168, 223);
+    color: rgb(248, 252, 10);
+    background-size: cover;
+  }
+  .sexto-container {
+    background-color: rgb(27, 79, 139);
+    color: rgb(248, 252, 10);
+    background-size: cover;
+  }
+  .second-containter {
+    border: 1px solid white;
+    height: 100vh;
+    text-align: center;
+  }
+  .titulo_1 {
+    color: rgb(238, 234, 11);
+    text-align: center;
+    vertical-align: center;
+    height: 20vh;
+    padding: 10vh;
+  }
+  .paragrafo_1 {
+    font-size: 18px;
+    color: rgb(238, 234, 11);
+  }
+  form [type="submit"] {
+    height: 30px;
+    width: 20%;
+    background-color: rgb(20, 85, 182);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .inscrito {
+    height: 80px;
+    width: 100%;
+    color: rgb(230, 10, 10);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .texto_3pag {
+    text-align: left;
+    padding: 15vh;
+  }
+  .imagem_esqueleto {
+    float: right;
+  }
+  .caracteristicas {
+    display: flex;
+    justify-content: space-around;
+  }
+  .video {
+    padding: 20vh;
+  }
+  .texto_video {
+    text-align: right;
+    padding: 15vh;
+  }
+  .titulo_2 {
+    color: rgb(238, 234, 11);
+    text-align: center;
+    vertical-align: center;
+    height: 20vh;
+    padding: 1vh;
+  }
+  .borda {
+    border-style: solid;
+    background-size: cover;
+  }
+  .imagem_esqueleto {
+    float: right;
+  }
+  .texto_video {
+    text-align: right;
+    padding: 30%;
+  }
