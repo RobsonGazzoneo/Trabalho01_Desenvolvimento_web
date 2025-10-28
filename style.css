@@ -17,14 +17,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: var(--color-text-light); /* Cor de texto padrão para as seções */
+    color: var(--color-text-light);
 }
 
 /* Estrutura de Seções */
 .section-container {
     width: 100%;
-    padding: 40px 0; /* Espaçamento interno vertical */
-    min-height: 50vh; /* Altura mínima para as seções */
+    padding: 40px 0; 
+    min-height: 50vh; 
 }
 
 .section-dark-bg {
@@ -33,18 +33,18 @@ body {
 
 .section-light-bg {
     background-color: var(--color-secondary);
-    color: var(--color-text-dark); /* Cor de texto diferente para fundo claro */
+    color: var(--color-text-dark); 
 }
 
 .section-darker-bg {
-    background-color: rgb(20, 50, 90); /* Uma variação do azul escuro */
+    background-color: rgb(20, 50, 90); 
 }
 
 .page-content-area {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Margem lateral para a fluidez */
-    text-align: center;
+    padding: 0 20px; 
+    text-align: center; /* Garante que títulos e parágrafos estejam centralizados */
 }
 
 .main-title {
@@ -86,15 +86,18 @@ body {
     border: 3px solid var(--color-highlight);
 }
 
-/* Formulário de Inscrição */
+/* Formulário de Inscrição (APLICANDO A CENTRALIZAÇÃO) */
 .inscrito-form {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 10px;
     margin-bottom: 40px;
     width: 100%;
     max-width: 600px;
+    /* Adicionando margin auto para centralizar o bloco do formulário */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inscrito-form input[type="text"],
@@ -102,7 +105,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    flex-grow: 1; /* Faz os campos preencherem o espaço */
+    flex-grow: 1; 
     min-width: 200px;
 }
 
@@ -136,7 +139,7 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px 15px;
     border-radius: 5px;
-    flex-basis: calc(25% - 15px); /* Grid de 4 colunas */
+    flex-basis: calc(25% - 15px); 
     min-width: 120px;
     font-size: 0.9em;
     font-weight: bold;
@@ -145,13 +148,13 @@ body {
 /* Seção 2: Rotina do Curso */
 .course-routine-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
     margin: 40px 0;
 }
 
 .grid-item {
-    background-color: rgba(27, 79, 139, 0.1); /* Um toque de cor de fundo */
+    background-color: rgba(27, 79, 139, 0.1); 
     color: var(--color-text-dark);
     padding: 20px;
     border-radius: 8px;
@@ -197,9 +200,8 @@ body {
 .video-container {
     flex: 1;
     min-width: 300px;
-    /* Para manter a proporção do iframe (16:9) */
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
 }
@@ -266,18 +268,17 @@ body {
 
 /* --- Media Queries (Para Responsividade/Fluidez) --- */
 
-/* Telas menores que 1024px (Tablets) */
 @media (max-width: 1024px) {
     .about-us-content,
     .video-text-layout {
-        flex-direction: column; /* Coloca os blocos de texto/imagem/vídeo em coluna */
+        flex-direction: column; 
         text-align: center;
     }
 
     .about-us-content .image-aside {
         width: 100%;
         max-width: 400px;
-        order: -1; /* Coloca a imagem no topo no mobile */
+        order: -1;
     }
 
     .video-container {
@@ -285,7 +286,6 @@ body {
     }
 }
 
-/* Telas menores que 600px (Celulares) */
 @media (max-width: 600px) {
     .main-title {
         font-size: 2em;
@@ -295,15 +295,14 @@ body {
         font-size: 1.5em;
     }
 
+    /* O formulário de inscrição já está centralizado, mas garante que os inputs quebrem a linha */
     .inscrito-form {
         flex-direction: column;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 300px; /* Limita a largura para melhor visualização em mobile */
     }
 
     .features-list li {
-        flex-basis: calc(50% - 15px); /* Grid de 2 colunas */
+        flex-basis: calc(50% - 15px); 
     }
     
     .testimonial-quote {
