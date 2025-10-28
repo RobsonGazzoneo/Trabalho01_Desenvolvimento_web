@@ -1,93 +1,315 @@
-.first-container {
-    background-color: purple;
-    color: white;
+/* Paleta de Cores & Variáveis */
+:root {
+    --color-primary: rgb(27, 79, 139); /* Azul Escuro */
+    --color-secondary: rgb(74, 168, 223); /* Azul Claro */
+    --color-highlight: rgb(238, 234, 11); /* Amarelo */
+    --color-text-light: white;
+    --color-text-dark: rgb(27, 79, 139);
+}
+
+/* Reset Básico e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-light); /* Cor de texto padrão para as seções */
+}
+
+/* Estrutura de Seções */
+.section-container {
+    width: 100%;
+    padding: 40px 0; /* Espaçamento interno vertical */
+    min-height: 50vh; /* Altura mínima para as seções */
+}
+
+.section-dark-bg {
+    background-color: var(--color-primary);
+}
+
+.section-light-bg {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark); /* Cor de texto diferente para fundo claro */
+}
+
+.section-darker-bg {
+    background-color: rgb(20, 50, 90); /* Uma variação do azul escuro */
+}
+
+.page-content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Margem lateral para a fluidez */
+    text-align: center;
+}
+
+.main-title {
+    color: var(--color-highlight);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    color: var(--color-highlight);
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.subtitle-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Estilo do Cabeçalho (Seção 1) */
+.header-content {
     background-image: url("https://img.freepik.com/vetores-gratis/circuitos-com-fundo-digital-gradiente-azul-e-vermelho_23-2148821701.jpg?w=900&t=st=1697041344~exp=1697041944~hmac=5052d45382f4bc3306b828704e4d367975e4c84ac2197d57480b126ea122cd10.jpg");
     background-size: cover;
-  }
-  .segundo-container {
-    background-color: rgb(74, 168, 223);
-    color: rgb(248, 252, 10);
-    background-size: cover;
-  }
-  .terceiro-container {
-    background-color: rgb(27, 79, 139);
-    color: rgb(248, 252, 10);
-    background-size: cover;
-  }
-  .quinto-container {
-    background-color: rgb(74, 168, 223);
-    color: rgb(248, 252, 10);
-    background-size: cover;
-  }
-  .sexto-container {
-    background-color: rgb(27, 79, 139);
-    color: rgb(248, 252, 10);
-    background-size: cover;
-  }
-  .second-containter {
-    border: 1px solid white;
-    height: 100vh;
-    text-align: center;
-  }
-  .titulo_1 {
-    color: rgb(238, 234, 11);
-    text-align: center;
-    vertical-align: center;
-    height: 20vh;
-    padding: 10vh;
-  }
-  .paragrafo_1 {
-    font-size: 18px;
-    color: rgb(238, 234, 11);
-  }
-  form [type="submit"] {
-    height: 30px;
-    width: 20%;
-    background-color: rgb(20, 85, 182);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .inscrito {
-    height: 80px;
+    background-position: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--color-highlight);
+}
+
+/* Formulário de Inscrição */
+.inscrito-form {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
     width: 100%;
-    color: rgb(230, 10, 10);
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .texto_3pag {
-    text-align: left;
-    padding: 15vh;
-  }
-  .imagem_esqueleto {
-    float: right;
-  }
-  .caracteristicas {
+    max-width: 600px;
+}
+
+.inscrito-form input[type="text"],
+.inscrito-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex-grow: 1; /* Faz os campos preencherem o espaço */
+    min-width: 200px;
+}
+
+.inscrito-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: rgb(20, 85, 182);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.inscrito-form input[type="submit"]:hover {
+    background-color: rgb(15, 60, 130);
+}
+
+/* Lista de Características (Abaixo do Form) */
+.features-list {
+    list-style: none;
     display: flex;
     justify-content: space-around;
-  }
-  .video {
-    padding: 20vh;
-  }
-  .texto_video {
-    text-align: right;
-    padding: 15vh;
-  }
-  .titulo_2 {
-    color: rgb(238, 234, 11);
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.features-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    flex-basis: calc(25% - 15px); /* Grid de 4 colunas */
+    min-width: 120px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Seção 2: Rotina do Curso */
+.course-routine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.grid-item {
+    background-color: rgba(27, 79, 139, 0.1); /* Um toque de cor de fundo */
+    color: var(--color-text-dark);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Seção 3: Quem Somos (Layout com Imagem ao Lado) */
+.about-us-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.about-us-content .text-block {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-us-content .image-aside {
+    flex-shrink: 0;
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 5px solid var(--color-highlight);
+}
+
+/* Seção 4: Como Funciona (Vídeo e Texto) */
+.video-text-layout {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.video-container {
+    flex: 1;
+    min-width: 300px;
+    /* Para manter a proporção do iframe (16:9) */
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    min-width: 300px;
+    color: var(--color-text-dark);
+}
+
+/* Seção 5: Relato (Testemunho) */
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+.testimonial-quote {
+    font-size: 1.5em;
+    font-style: italic;
+    max-width: 800px;
+    margin: 20px 0;
+    border-left: 5px solid var(--color-highlight);
+    padding-left: 20px;
+    text-align: left;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonial-author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 3px solid var(--color-highlight);
+    object-fit: cover;
+}
+
+/* Rodapé */
+.section-footer {
+    background-color: var(--color-primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
     text-align: center;
-    vertical-align: center;
-    height: 20vh;
-    padding: 1vh;
-  }
-  .borda {
-    border-style: solid;
-    background-size: cover;
-  }
-  .imagem_esqueleto {
-    float: right;
-  }
-  .texto_video {
-    text-align: right;
-    padding: 30%;
-  }
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-highlight);
+}
+
+/* --- Media Queries (Para Responsividade/Fluidez) --- */
+
+/* Telas menores que 1024px (Tablets) */
+@media (max-width: 1024px) {
+    .about-us-content,
+    .video-text-layout {
+        flex-direction: column; /* Coloca os blocos de texto/imagem/vídeo em coluna */
+        text-align: center;
+    }
+
+    .about-us-content .image-aside {
+        width: 100%;
+        max-width: 400px;
+        order: -1; /* Coloca a imagem no topo no mobile */
+    }
+
+    .video-container {
+        width: 100%;
+    }
+}
+
+/* Telas menores que 600px (Celulares) */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .inscrito-form {
+        flex-direction: column;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features-list li {
+        flex-basis: calc(50% - 15px); /* Grid de 2 colunas */
+    }
+    
+    .testimonial-quote {
+        font-size: 1.2em;
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+    }
+}
